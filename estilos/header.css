@@ -183,6 +183,7 @@
         color: #000000;
         font-weight: 400;
         font-family: var(--fonte-principal);
+        display: block;
     }
 
     .container__imagem{
