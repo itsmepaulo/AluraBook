@@ -1,0 +1,186 @@
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /*O position relative, habilita utilizar o top, right, bottom e left */
+}   
+
+.cabecalho__menu{
+    background-image: url(../imagens/Menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+}
+
+
+.container{
+    align-items: center;
+    display: flex;
+    
+}
+
+.container__imagem{
+    padding: 1em;
+
+}
+
+.lista-menu{
+    list-style: none;
+    display: none;
+    position: absolute; /*Ele permite movimentar o elemento de acordo com o elemento pai */
+    top: 100%; 
+}
+
+.container__botao:checked ~ .lista-menu{   /* ao clicar no check do hamburguer, aparecerá a lista. O tio é chamado de combinador css*/ 
+    display: block;
+}
+
+.container__botao{
+    display: none;
+}
+
+.lista-menu__titulo, .lista-menu__item{
+    padding: 1em 5em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: var(--branco);
+    font-family: var(--fonte-principal);
+}
+
+.lista-menu__titulo{
+    font-weight: 700;
+    color: var(--cor-do-titulo-menu);
+}
+
+.lista-menu__item>a{
+   text-decoration: none;
+   color: var(--cor-da-fonte-menu);
+   
+}
+
+.container__titulo{
+    display: none;
+
+}
+
+.nav__categorias{
+    display: none;
+
+}
+
+@media screen and (min-width: 1024px){
+
+    .container__titulo, .container__titulo--negrito{
+        font-family: var(--fonter-secundaria);
+        font-size: 1.875rem;
+        display: inline-block;
+    }
+
+    .container__titulo{
+        font-weight: 400;
+
+    }
+
+    .container__titulo--negrito{
+        font-weight: 700;
+
+    }
+
+    .nav__categorias{
+        display: flex;
+        gap: 30px;
+        font-family: var(--fonte-principal);
+
+
+    }
+
+    .nav__categorias--itens{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #000000;
+    }
+
+    .container__imagem{
+        margin-right: 50px;
+    }
+
+    .favorito{
+        display: none;
+
+    }
+
+    
+    .opcoes__botao:checked ~ .lista-menu{
+        display: block;
+        width: auto;
+        text-align: center;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+
+    .cabecalho__menu{
+        display: none;
+
+    }
+
+    .lista-menu__item, .lista-menu__titulo{
+        padding: 1em ;
+
+    }
+}
+
+@media screen and (min-width:1728px){
+    
+    .opcoes__botao:active{
+        background-color: var(--azul);
+
+    }
+    .lista-menu{
+        padding: 0;
+
+    }
+    .opcoes__botao:checked{
+        background-color: var(--azul);
+    }
+    
+    .lista-menu__item:hover{
+        background-color: var(--azul);
+        
+    }
+
+    .lista-menu__item>a{
+        padding: 1em 1em;
+
+    }
+    .lista-menu__item>a:hover{
+        color: var(--branco);
+       
+    }
+
+    .container{
+        margin-right: 30px;
+    }
+
+    .container__texto{
+        text-decoration: none;
+        font-size: 1.25rem;
+        color: #000000;
+        font-weight: 400;
+        font-family: var(--fonte-principal);
+    }
+
+    .container__imagem{
+        margin-right: 0;
+    }
+    
+    .nav__categorias{
+        margin-right: auto;
+    }
+}

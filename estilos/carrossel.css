@@ -1,0 +1,138 @@
+
+
+.carrossel__titulo{
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--cor-do-titulo-menu);
+    padding: 1em 0 0.5em 0;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--branco);
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
+div.swiper-button-prev, div.swiper-button-next{
+    display: none;
+
+}
+
+div.swiper-pagination{
+    position: initial;
+    margin: 0.5em 0;
+}
+
+.card{
+    background-color: var(--branco);
+    margin: 1em;
+    padding: 1em;
+    box-shadow: 0px 4px 4px rgba(0,0,0, 0.25);
+    border-radius: 10px;
+}
+
+.card__descricao{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.descricao__titulo{
+    color: var(--cor-do-titulo-menu);
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+
+.descricao__titulo-livro{
+    color: var(--azul);
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+.descricao__texto{
+    color: #000000D9;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.card__descricao img{
+    width: 162px;
+    height: 168px;
+
+}
+
+.card__botoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botoes{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.botao__ancora{
+    text-decoration: none;
+    background-color: var(--cor-do-titulo-menu);
+    color: var(--branco);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1.3em 2.2em;
+}
+
+.descricao img{
+    width: 91px;
+    height: 15px;
+
+}
+
+@media screen and (min-width:1024px){
+
+    .carrossel__titulo{
+        padding: 30px 0 20px 0;
+
+    }
+    div.swiper{
+        width: 800px;
+        padding: 30px 0;
+    }
+
+    .swiper-slide img{
+        width: 192px;
+        height: 265px;
+        box-shadow: 2px 4px 8px 0px #00000026;
+    }
+
+    .card{
+        width:588px;
+        margin: 30px auto;
+        
+    }
+
+    .carrossel__titulo{
+        font-size: 1.625rem;
+    }
+
+}
+
+
+@media screen and (min-width:1728px){
+    
+    .container__grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 50px 0 ;
+        text-align: center;
+    }
+
+    
+    
+    
+}
